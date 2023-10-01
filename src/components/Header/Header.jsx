@@ -9,7 +9,7 @@ const Header = () => {
   const stickyHeaderFunc=()=>{
     window.addEventListener('scroll', ()=>{
     if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
-    headerRef.current.classList.add('sticky_header')
+    headerRef.current.classList.add('sticky__header')
     }else{
     headerRef.current.classList.remove('sticky__header')
     }
@@ -19,13 +19,14 @@ const Header = () => {
 
     useEffect (()=>{
     stickyHeaderFunc()
+
     return window.removeEventListener('scroll', stickyHeaderFunc)
     }, [])
 
     const handleClick = e=> {
       e.preventDefault();
-      const targetAttr= e.target.getAttribute("href");
-      const location = document.querySelector(targetAttr).offsetTop;
+      const targetAttr= e.target.getAttribute("href")
+      const location = document.querySelector(targetAttr).offsetTop
       window.scrollTo({
       top: location - 80,
       left: 0,
@@ -35,10 +36,12 @@ const Header = () => {
   
 
 
-const toggleMenu =()=> menuRef.current.classList.toggle('show_menu')
+const toggleMenu = () => menuRef.current.classList.toggle('show__menu')
 
   return (
-  <header ref={headerRef} className="w-full h-[80px] leading-[80px] flex items-center">
+  <header
+  ref={headerRef}
+  className="w-full h-[80px] leading-[80px] flex items-center">
   <div className="container">
   <div className="flex items-center justify-between">
 
@@ -56,11 +59,11 @@ personal
 </div>
 { /* logo end */ }
 { /* menu start */ }
-<div className= "menu" onClick={toggleMenu}>
+<div className= "menu" ref={menuRef} onClick={toggleMenu}>
 <ul className="flex items-center gap-10">
 <li>
 <a onClick={handleClick} className='text-smallTextColor font-[600]' href="#about">About</a>
-</li> I
+</li>
 <li>
 <a onClick={handleClick} className='text-smallTextColor font-[600]' href="#services">Services</a>
 </li>

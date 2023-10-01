@@ -173,15 +173,15 @@ const Portfolio = () => {
 
 
     useEffect (()=>{
-        if(selectTab==='all'){
+        if(selectTab=='all'){
         setPortfolios(data)
         }
-        if(selectTab==='web-design'){
-        const filteredData = data.filter(item=> item.category==='Web Design')
+        if(selectTab=='web-design'){
+        const filteredData = data.filter(item=> item.category=='Web Design')
         setPortfolios(filteredData)
         }
-        if(selectTab=== 'ux-design') {
-        const filteredData = data.filter(item=> item.category=== 'Ux')
+        if(selectTab== 'ux-design') {
+        const filteredData = data.filter(item=> item.category== 'Ux')
         setPortfolios(filteredData)
         }
         },[selectTab]);
