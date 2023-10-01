@@ -5,7 +5,7 @@ import portfolioData from '../../assets/data/portfolioData'
 
 const Modal = ({activeID,setShowModal}) => {
 
- 
+    const portfolios=portfolioData.find(portfolio=>portfolioData.id===activeID);
 
 
   return (
@@ -14,7 +14,7 @@ const Modal = ({activeID,setShowModal}) => {
     // <div>
     // <figure>
     <div>
-            <img  src={portfolioData.imgUrl} alt="" />
+            <img  src={portfolios.imgUrl} alt="" />
     </div>
 
     // </figure>
