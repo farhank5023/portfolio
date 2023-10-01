@@ -6,7 +6,7 @@ import portfolioImg05 from "../images/portfolio-05.jpg";
 import portfolioImg06 from "../images/portfolio-06.jpg";
 import portfolioImg07 from "../images/portfolio-07.jpg";
 
-const portfolios = [
+const portfolioData = [
   {
     id: "01",
     imgUrl: portfolioImg01,
@@ -150,4 +150,4 @@ const portfolios = [
   },
 ];
 
-export default portfolios;
+export default portfolioData;

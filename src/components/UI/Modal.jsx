@@ -1,11 +1,11 @@
 import React from 'react'
-import portfolios from '../../assets/data/portfolioData'
+import portfolioData from '../../assets/data/portfolioData'
 
 
 
 const Modal = ({activeID,setShowModal}) => {
 
-    const portfolio=portfolios.find(portfolio=>portfolio.id===activeID);
+ 
 
 
   return (
@@ -14,7 +14,7 @@ const Modal = ({activeID,setShowModal}) => {
     // <div>
     // <figure>
     <div>
-            <img  src={portfolio.imgurl} alt="" />
+            <img  src={portfolioData.imgUrl} alt="" />
     </div>
 
     // </figure>
