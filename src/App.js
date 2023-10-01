@@ -9,6 +9,7 @@ import Hero from './components/UI/Hero';
 import Services from './components/UI/Services';
 import Portfolio from './components/UI/Portfolio';
 import Modal from './components/UI/Modal';
+import Contact from './components/UI/Contact';
 
 
 function App() {
@@ -23,12 +24,13 @@ useEffect(()=>{
   return <>
   <Header/>
 <main>
-<Hero/>
-<Services/>
-<Portfolio/>
-<Modal/>
+<Hero />
+<Services />
+<Portfolio />
+<Modal />
+<Contact />
 </main>
-  <Footer/>
+<Footer/>
   </>
 }
 
